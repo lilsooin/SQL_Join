@@ -45,7 +45,7 @@ INSERT INTO computer (computer_id, computer_name, manufacturer, software_id) VAL
 (8, 'ASUS ZenBook', 'ASUS-ZEN-008', NULL);
 
 
-
+-- left outer join
 SELECT *
 FROM computer
 LEFT JOIN software
@@ -67,6 +67,13 @@ LEFT JOIN software
 ON computer.software_id = software.software_id
 LEFT JOIN operating_system
 ON software.os_id = operating_system.os_id;
+
+
+-- inner join
+SELECT *
+FROM computer
+INNER JOIN software
+ON computer.software_id = software.software_id;
 
 SELECT *
 FROM computer
