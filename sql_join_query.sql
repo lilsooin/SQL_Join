@@ -67,3 +67,10 @@ LEFT JOIN software
 ON computer.software_id = software.software_id
 LEFT JOIN operating_system
 ON software.os_id = operating_system.os_id;
+
+SELECT *
+FROM computer
+INNER JOIN software
+ON computer.software_id = software.software_id
+INNER JOIN operating_system
+ON software.os_id = operating_system.os_id;
