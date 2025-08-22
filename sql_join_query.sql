@@ -68,6 +68,11 @@ ON computer.software_id = software.software_id
 LEFT JOIN operating_system
 ON software.os_id = operating_system.os_id;
 
+-- right join
+SELECT *
+FROM computer
+RIGHT JOIN software
+ON software.software_id = computer.software_id;
 
 -- inner join
 SELECT *
@@ -81,3 +86,17 @@ INNER JOIN software
 ON computer.software_id = software.software_id
 INNER JOIN operating_system
 ON software.os_id = operating_system.os_id;
+
+
+-- full outer join
+SELECT * 
+FROM computer
+LEFT JOIN software
+ON computer.software_id = software.software_id
+
+UNION
+
+SELECT *
+FROM computer
+RIGHT JOIN software
+ON computer.software_id = software.software_id;
