@@ -100,3 +100,11 @@ SELECT *
 FROM computer
 RIGHT JOIN software
 ON computer.software_id = software.software_id;
+
+
+-- Exclusive left join
+SELECT * 
+FROM computer
+LEFT JOIN software
+ON computer.software_id = software.software_id
+WHERE software.software_id is null;
